@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,200;1,400&display=swap');
+
+:root{
+    --lato:'Montserrat', sans-serif;
+    --lora: 'Lora', serif;
+    --swiper-navigation-size: 25px !important;
+  }
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-lato{
+    font-family: var(--lato);
+}
+
+.font-lora{
+    font-family: var(--lora);
+}
+
+
+@layer base {
+    html {
+    font-family: var(--lato);
+    }
+}
+
+.file-input{
+    height: 2.5rem;
+}
+.btn-pink{
+    @apply bg-ui-pink text-white font-bold px-4 py-2 rounded-lg hover:shadow-lg hover:bg-[#e85f6b]
+}
+
+.button-xs{
+    @apply text-xs text-ui-pink border font-medium border-ui-pink p-1 rounded-md hover:bg-ui-pink hover:text-white
+}
+
+.btn-pink-sm{
+    @apply text-sm text-white bg-ui-pink px-2 py-1 rounded-lg 
+}
+
+button:disabled{
+    background-color: rgb(167, 166, 166);
+    color: white;
+    border: none;
+}
+button:disabled:hover{
+    background-color: rgb(167, 166, 166);
+}
+
+.label-text{
+    @apply text-xs
+}
+
+.input{
+    font-size: small;
+    height: 2.5rem;
+}
+
+.hover-action{
+    @apply bg-ui-pink bg-opacity-10
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: rgb(244, 93, 118) !important;
+    background-color: rgb(255, 196, 221,0.7);
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+  
+}
+
+.swiper-pagination-bullet-active{
+    background-color: rgb(244, 93, 118) !important;
+}
+/* table css */
+th{
+    @apply bg-ui-pink text-white text-base
+}
+
+th:nth-child(1){
+    @apply rounded-l-lg
+}
+th:nth-last-child(1){
+    @apply rounded-r-lg;
+}
+/* TODO add pink dark to config, add button hover to dark bg */
